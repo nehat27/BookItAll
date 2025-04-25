@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookItAll - Flight Booking</title>
+    <link rel="stylesheet" href="flights.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>BookItAll</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="train.html">Trains</a></li>
+                <li><a href="buses.html">Buses</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login/signup.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Flight Booking Section -->
+    <section class="flight-booking">
+        <div class="container">
+            <h2>Book Your Flight ✈️</h2>
+            <form onsubmit="searchFlights(event)" action="#" method="post">
+                <div class="form-group">
+                    <label for="from">From:</label>
+                    <select id="from" name="from" required>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="pune">Pune</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                        <option value="jaipur">Jaipur</option>
+                        <option value="kochi">Kochi</option>
+                        <option value="goa">Goa</option>
+                        <option value="lucknow">Lucknow</option>
+                        <option value="bhopal">Bhopal</option>
+                        <option value="patna">Patna</option>
+                        <option value="visakhapatnam">Visakhapatnam</option>
+                        <option value="coimbatore">Coimbatore</option>
+                        <option value="indore">Indore</option>
+                        <option value="nagpur">Nagpur</option>
+                        <option value="kanpur">Kanpur</option>
+                        <option value="guwahati">Guwahati</option>
+                        <option value="trivandrum">Thiruvananthapuram</option>
+                        <option value="madurai">Madurai</option>
+                        <option value="rajkot">Rajkot</option>
+                        <option value="srinagar">Srinagar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="to">To:</label>
+                    <select id="to" name="to" required>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="pune">Pune</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                        <option value="jaipur">Jaipur</option>
+                        <option value="kochi">Kochi</option>
+                        <option value="goa">Goa</option>
+                        <option value="lucknow">Lucknow</option>
+                        <option value="bhopal">Bhopal</option>
+                        <option value="patna">Patna</option>
+                        <option value="visakhapatnam">Visakhapatnam</option>
+                        <option value="coimbatore">Coimbatore</option>
+                        <option value="indore">Indore</option>
+                        <option value="nagpur">Nagpur</option>
+                        <option value="kanpur">Kanpur</option>
+                        <option value="guwahati">Guwahati</option>
+                        <option value="trivandrum">Thiruvananthapuram</option>
+                        <option value="madurai">Madurai</option>
+                        <option value="rajkot">Rajkot</option>
+                        <option value="srinagar">Srinagar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="departure-date">Departure Date:</label>
+                    <input type="date" id="departure-date" name="departure-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="return-date">Return Date (optional):</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+                <div class="form-group">
+                    <label for="passengers">Passengers:</label>
+                    <div class="passenger-input">
+                        <label for="adult-passengers">Adults:</label>
+                        <input type="number" id="adult-passengers" name="adult-passengers" placeholder="Adults" min="1" max="10" value="1" required>
+                        
+                        <label for="kid-passengers">Kids:</label>
+                        <input type="number" id="kid-passengers" name="kid-passengers" placeholder="Kids" min="0" max="10" value="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="class">Class:</label>
+                    <select id="class" name="class">
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                        <option value="first-class">First Class</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Search Flights</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>© 2024 BookItAll. All Rights Reserved.</p>
+            <p>Email: support@bookitall.com | Phone: +123-456-7890</p>
+            <p>Office Address: 123 Travel Avenue, Wanderlust City, 45678</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchFlights(event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+
+            // Store form data if needed
+            localStorage.setItem('from', document.getElementById('from').value);
+            localStorage.setItem('to', document.getElementById('to').value);
+            localStorage.setItem('departure-date', document.getElementById('departure-date').value);
+
+            // Redirect to flight results page
+            window.location.href = 'flight-results.html';
+        }
+    </script>
+</body>
+</html>

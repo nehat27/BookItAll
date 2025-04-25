@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation - BookItAll</title>
+    <link rel="stylesheet" href="reststyles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>BookItAll</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="train.html">Trains🚆</a></li>
+                <li><a href="buses.html">Buses🚌</a></li>
+                <li><a href="movies.html">Movies🎬</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login/signup.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Restaurant Reservation Form Section -->
+    <section class="reservation-form">
+        <div class="container">
+            <h2>Reserve Your Table</h2>
+            <form action="restaurantresults.html" method="GET">
+                <label for="restaurant">Select Restaurant:</label>
+                <select id="restaurant" name="restaurant">
+                    <option value="fine-dining">Fine Dining</option>
+                    <option value="casual-dining">Casual Dining</option>
+                    <option value="cafe">Cafe</option>
+                    <option value="fast-food">Fast Food</option>
+                </select>
+
+                <label for="date">Reservation Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Reservation Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+                <button type="submit" class="btn">Search Restaurants🍽️</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>© 2024 BookItAll. All Rights Reserved.</p>
+            <p>Email: support@bookitall.com | Phone: +123-456-7890</p>
+            <p>Office Address: 123 Travel Avenue, Wanderlust City, 45678</p>
+        </div>
+    </footer>
+
+</body>
+</html>

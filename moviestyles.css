@@ -1,0 +1,142 @@
+/* Movie Booking Section */
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051622; /* Very dark blue */
+    padding: 20px;
+    color: white;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    color: #1BA098; /* Teal */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #1BA098; /* Teal */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #DEB992; /* Light beige */
+}
+
+.movie-booking-section {
+    background-color: #1BA098; /* Teal background */
+    padding: 70px 0;
+    text-align: center;
+    color: white;
+}
+
+.movie-booking-section .container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+    max-width: 600px; /* Max width for the form */
+    margin: 0 auto; /* Center form horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form elements */
+}
+
+.form-group {
+    width: 100%;
+    max-width: 500px; /* Max width for form group */
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text for label */
+    text-align: center; /* Center-align text */
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ffffff; /* White border */
+    background-color: #DEB992; /* Light beige background */
+    color: #051622; /* Dark text */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.form-group select:hover {
+    background-color: #051622; /* Change background on hover */
+    color: #DEB992; /* Light beige text on hover */
+}
+
+/* Submit Button */
+.btn {
+    padding: 15px 30px;
+    background-color: #DEB992; /* Light beige background */
+    color: #051622; /* Dark text */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 20px; /* Add spacing above button */
+}
+
+.btn:hover {
+    background-color: #051622; /* Dark background on hover */
+    color: #DEB992; /* Light beige text on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #051622; /* Dark blue background */
+    color: #DEB992; /* Light beige text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .contact-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #051622; /* Very dark blue */
+    color: white;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10px 0;
+}

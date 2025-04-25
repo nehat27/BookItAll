@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Payment - BookItAll</title>
+    <link rel="stylesheet" href="moviepayment.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>BookItAll</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="trainbooking.html">Trains</a></li>
+                <li><a href="buses.html" class="active">Buses🚌</a></li>
+                <li><a href="movies.html">Movies🎬</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login/signup.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="container">
+            <h2>Payment Options</h2>
+            <form action="confirmation.html" method="post">
+                <div class="payment-options">
+                    <label for="payment-method">Select Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="cash">Cash</option>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="debit-card">Debit Card</option>
+                        <option value="net-banking">Net Banking</option>
+                        <option value="upi">UPI</option>
+                    </select>
+                </div>
+
+                <!-- Payment Details Section (for card/net banking/UPI) -->
+                <div class="payment-details" id="payment-details">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter card number" required>
+                    
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                    
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                </div>
+
+                <!-- Cash Payment (Only display for cash) -->
+                <div class="cash-payment" id="cash-payment">
+                    <p>Please pay cash at the time of boarding the bus.</p>
+                </div>
+
+                <!-- Submit Button -->
+                <a href="confirmation.html" class="btn">Confirm Payment</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>© 2024 BookItAll. All Rights Reserved.</p>
+            <p>Email: support@bookitall.com | Phone: +123-456-7890</p>
+            <p>Office Address: 123 Travel Avenue, Wanderlust City, 45678</p>
+        </div>
+    </footer>
+
+    <script>
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const paymentDetails = document.getElementById('payment-details');
+        const cashPayment = document.getElementById('cash-payment');
+
+        paymentMethodSelect.addEventListener('change', function() {
+            if (this.value === 'cash') {
+                paymentDetails.style.display = 'none';
+                cashPayment.style.display = 'block';
+            } else {
+                paymentDetails.style.display = 'block';
+                cashPayment.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

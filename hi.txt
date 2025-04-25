@@ -1,0 +1,28 @@
+<html> 
+<head> 
+<title >Check the number of Vowels in a given String</title> 
+<p id="Vowel Count"></p> 
+<script> 
+function vowelCount() 
+{ 
+var count=0; 
+var input1=document.getElementById("str").value; 
+for(var i = 0; i < input1.length; i++)  
+{  
+if(input1.charAt(i) == 'a' || input1.charAt(i) == 'e' || input1.charAt(i) == 'i' || input1.charAt(i)   
+== 'o' || input1.charAt(i) == 'u') 
+{ 
+count++; 
+} 
+} 
+document.getElementById("str1").value=count; 
+; 
+} 
+</script> 
+</head> 
+<body> 
+<label> String entered is <input id="str"> </label><br><br> 
+<label> Number of Vowels <input id="str1"> </label> 
+<button onclick="vowelCount()">  Check    </button> 
+</body> 
+</html>

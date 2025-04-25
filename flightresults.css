@@ -1,0 +1,129 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051622; /* Very dark blue */
+    padding: 15px 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 2em;
+    color: #1BA098; /* Teal */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #DEB992; /* Light beige */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1BA098; /* Teal */
+    color: #fff;
+}
+
+/* Flight Results Section */
+.flight-results {
+    padding: 40px 20px;
+    background-color: #e9ecef;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flight-results h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #051622;
+}
+
+/* Flight Cards Styling */
+.flight-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Space between cards */
+    justify-items: center; /* Centers the cards */
+}
+
+.flight-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Ensures the cards take the width allocated by the grid */
+    max-width: 350px; /* Optional: Limit the maximum width */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.flight-card:hover {
+    transform: scale(1.05);
+}
+
+.flight-card h3 {
+    color: #051622;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.flight-card p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.flight-card button {
+    background-color: #1BA098; /* Teal */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.flight-card button:hover {
+    background-color: #139a82;
+}
+
+/* Footer Section */
+footer {
+    background-color: #051622;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #DEB992; /* Light beige */
+}

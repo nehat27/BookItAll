@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookItAll - Seat Selection</title>
+    <link rel="stylesheet" href="seats.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>BookItAll</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="trains.html">Trains</a></li>
+                <li><a href="buses.html">Buses</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login/signup.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seat Selection Section -->
+    <section class="seat-selection">
+        <div class="container">
+            <h2>Select Your Seat</h2>
+            <!-- Seat Map -->
+            <div class="seat-map">
+                <!-- Example seats, you can style these as you like -->
+                <button class="seat" onclick="selectSeat('A1')">A1</button>
+                <button class="seat" onclick="selectSeat('A2')">A2</button>
+                <button class="seat" onclick="selectSeat('A3')">A3</button>
+                <button class="seat" onclick="selectSeat('B1')">B1</button>
+                <button class="seat" onclick="selectSeat('B2')">B2</button>
+                <button class="seat" onclick="selectSeat('B3')">B3</button>
+            </div>
+            <button onclick="goToPayment()">Proceed to Payment</button>
+        </div>
+    </section>
+
+    <script>
+        function selectSeat(seat) {
+            localStorage.setItem('selectedSeat', seat);
+        }
+
+        function goToPayment() {
+            window.location.href = 'payment.html';
+        }
+    </script>
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>© 2024 BookItAll. All Rights Reserved.</p>
+            <p>Email: support@bookitall.com | Phone: +123-456-7890</p>
+            <p>Office Address: 123 Travel Avenue, Wanderlust City, 45678</p>
+        </div>
+    </footer>
+</body>
+</html>

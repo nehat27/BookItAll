@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking - BookItAll</title>
+    <link rel="stylesheet" href="busesstyles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>BookItAll</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="train.html">Trains</a></li>
+                <li><a href="buses.html" class="active">Buses🚌</a></li>
+                <li><a href="movies.html">Movies🎬</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login/signup.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bus Booking Form -->
+    <section class="booking-form">
+        <div class="container">
+            <h2>Bus Booking</h2>
+            <form action="busresults.html" method="POST">
+                <label for="departure">Departure Station:</label>
+                <select id="departure" name="departure" required>
+                    <option value="">Select Departure</option>
+                    <!-- Add 24 national stations here -->
+                    <option value="">Select Departure</option>
+                    
+                    <option value="kolkata">Kolkata</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="pune">Pune</option>
+                    <option value="ahmedabad">Ahmedabad</option>
+                    <option value="jaipur">Jaipur</option>
+                    <option value="lucknow">Lucknow</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="nagpur">Nagpur</option>
+                    <option value="patna">Patna</option>
+                    <option value="bhopal">Bhopal</option>
+                    <option value="kanpur">Kanpur</option>
+                    <option value="indore">Indore</option>
+                    <option value="coimbatore">Coimbatore</option>
+                    <option value="trivandrum">Trivandrum</option>
+                    <option value="cochin">Cochin</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="meerut">Meerut</option>
+                    <option value="rajkot">Rajkot</option>
+                    <option value="shimla">Shimla</option>
+                    <option value="dehradun">Dehradun</option>
+                    <option value="amritsar">Amritsar</option>
+                    <option value="jodhpur">Jodhpur</option>
+                    <option value="gwalior">Gwalior</option>
+                </select>
+
+                <label for="destination">Destination Station:</label>
+                <select id="destination" name="destination" required>
+                    <option value="">Select Destination</option>
+                    <!-- Add 24 national stations here -->
+                    <option value="">Select Departure</option>
+                    
+                    <option value="kolkata">Kolkata</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="pune">Pune</option>
+                    <option value="ahmedabad">Ahmedabad</option>
+                    <option value="jaipur">Jaipur</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="lucknow">Lucknow</option>
+                    <option value="nagpur">Nagpur</option>
+                    <option value="patna">Patna</option>
+                    <option value="bhopal">Bhopal</option>
+                    <option value="kanpur">Kanpur</option>
+                    <option value="indore">Indore</option>
+                    <option value="coimbatore">Coimbatore</option>
+                    <option value="trivandrum">Trivandrum</option>
+                    <option value="cochin">Cochin</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="meerut">Meerut</option>
+                    <option value="rajkot">Rajkot</option>
+                    <option value="shimla">Shimla</option>
+                    <option value="dehradun">Dehradun</option>
+                    <option value="amritsar">Amritsar</option>
+                    <option value="jodhpur">Jodhpur</option>
+                    <option value="gwalior">Gwalior</option>
+                </select>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="passengers">Number of Passengers:</label>
+                <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+
+                <label for="bustype">Bus Type:</label>
+                <select id="bustype" name="bustype" required>
+                    <option value="">Select Bus Type</option>
+                    <option value="AC">AC</option>
+                    <option value="Non-AC">Non-AC</option>
+                    <option value="Sleeper">Sleeper</option>
+                    <option value="Seater">Seater</option>
+                </select>
+                <a href="busresults.html" class="btn">Search Busses</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>© 2024 BookItAll. All Rights Reserved.</p>
+            <p>Email: support@bookitall.com | Phone: +123-456-7890</p>
+            <p>Office Address: 123 Travel Avenue, Wanderlust City, 45678</p>
+        </div>
+    </footer>
+
+</body>
+</html>

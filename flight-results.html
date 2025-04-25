@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookItAll - Flight Results</title>
+    <link rel="stylesheet" href="flightresults.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>BookItAll</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="trains.html">Trains</a></li>
+                <li><a href="buses.html">Buses</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login/signup.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Flight Results Section -->
+    <section class="flight-results">
+        <div class="container">
+            <h2>Available Flights ✈️</h2>
+            <div class="flight-list">
+                <!-- Flight 1 -->
+                <div class="flight-card">
+                    <h3>AirIndia</h3>
+                    <p><strong>Price:</strong> ₹15000</p>
+                    <p><strong>Date:</strong> 17-09-2024</p>
+                    <p><strong>Time:</strong> 10:00 AM</p>
+                    <button onclick="selectFlight('Flight A')">Select Flight</button>
+                </div>
+                <!-- Flight 2 -->
+                <div class="flight-card">
+                    <h3>Emirates</h3>
+                    <p><strong>Price:</strong> ₹23000</p>
+                    <p><strong>Date:</strong> 17-09-2024</p>
+                    <p><strong>Time:</strong> 12:00 PM</p>
+                    <button onclick="selectFlight('Flight B')">Select Flight</button>
+                </div>
+                <!-- Flight 3 -->
+                <div class="flight-card">
+                    <h3>Indigo</h3>
+                    <p><strong>Price:</strong> ₹16000</p>
+                    <p><strong>Date:</strong> 17-09-2024</p>
+                    <p><strong>Time:</strong> 02:00 PM</p>
+                    <button onclick="selectFlight('Flight C')">Select Flight</button>
+                </div>
+                <!-- Flight 4 -->
+                <div class="flight-card">
+                    <h3>Habikio</h3>
+                    <p><strong>Price:</strong> ₹18000</p>
+                    <p><strong>Date:</strong> 17-09-2024</p>
+                    <p><strong>Time:</strong> 04:00 PM</p>
+                    <button onclick="selectFlight('Flight D')">Select Flight</button>
+                </div>
+                <!-- Flight 5 -->
+                <div class="flight-card">
+                    <h3>Sivha</h3>
+                    <p><strong>Price:</strong> ₹19000</p>
+                    <p><strong>Date:</strong> 17-09-2024</p>
+                    <p><strong>Time:</strong> 06:00 PM</p>
+                    <button onclick="selectFlight('Flight E')">Select Flight</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function selectFlight(flight) {
+            localStorage.setItem('selectedFlight', flight);
+            window.location.href = 'seat-selection.html';
+        }
+    </script>
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>© 2024 BookItAll. All Rights Reserved.</p>
+            <p>Email: support@bookitall.com | Phone: +123-456-7890</p>
+            <p>Office Address: 123 Travel Avenue, Wanderlust City, 45678</p>
+        </div>
+    </footer>
+</body>
+</html>

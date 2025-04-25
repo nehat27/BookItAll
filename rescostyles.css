@@ -1,0 +1,109 @@
+/* Confirmation Page */
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051622; /* Very dark blue */
+    padding: 20px;
+    color: white;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    color: #1BA098; /* Teal */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #1BA098; /* Teal */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #DEB992; /* Light beige */
+}
+.confirmation-page {
+    padding: 50px 20px;
+    background-color: #DEB992; /* Light beige background */
+    text-align: center;
+}
+
+.confirmation-page h2 {
+    font-size: 2.5em;
+    color: #1BA098; /* Teal */
+    margin-bottom: 30px;
+}
+
+.confirmation-details {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FFFFFF; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-details h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #051622; /* Very dark blue */
+}
+
+.confirmation-details p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.confirmation-action p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.confirmation-action .btn {
+    padding: 15px 30px;
+    background-color: #1BA098; /* Teal */
+    color: #FFFFFF; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.confirmation-action .btn:hover {
+    background-color: #051622; /* Very dark blue */
+}
+
+/* Header and Footer (to match other pages) */
+header, footer {
+    background-color: #051622; /* Very dark blue */
+    color: white;
+}
+
+header {
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #051622; /* Very dark blue */
+    color: white;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10px 0;
+}

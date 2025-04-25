@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Seat Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Select Your Seats</h2>
+        <div class="screen">Screen Here</div>
+        <div class="seat-container">
+            <div class="row">
+                <span class="row-label">A</span>
+                <button class="seat available">A1</button>
+                <button class="seat available">A2</button>
+                <button class="seat reserved">A3</button>
+                <button class="seat available">A4</button>
+            </div>
+            <div class="row">
+                <span class="row-label">B</span>
+                <button class="seat available">B1</button>
+                <button class="seat reserved">B2</button>
+                <button class="seat available">B3</button>
+                <button class="seat available">B4</button>
+            </div>
+            <div class="row">
+                <span class="row-label">C</span>
+                <button class="seat available">C1</button>
+                <button class="seat reserved">C2</button>
+                <button class="seat available">C3</button>
+                <button class="seat reserved">C4</button>
+            </div>
+            <button class="proceed-btn">Proceed</button>
+        </div>
+    </div>
+</body>
+</html>

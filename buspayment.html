@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Payment - BookItAll</title>
+    <link rel="stylesheet" href="busspayment.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>BookItAll</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="trainbooking.html">Trains</a></li>
+                <li><a href="buses.html" class="active">Buses🚌</a></li>
+                <li><a href="movies.html">Movies🎬</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="container">
+            <h2>Payment Options</h2>
+            <form id="payment-form" action="/confirm-payment" method="post">
+                <div class="payment-options">
+                    <label for="payment-method">Select Payment Method:</label>
+                    <select id="payment-method" name="paymentMethod" required>
+                        <option value="cash">Cash</option>
+                        <option value="blockchain">Blockchain</option>
+                    </select>
+                </div>
+
+                <!-- QR Code Section -->
+                <div class="qr-code" id="qr-code" style="display: none;">
+                    <p>Scan the QR code to complete your payment:</p>
+                    <img id="https://randomqr.com/assets/images/rickroll-qrcode.webp" src="qr-placeholder.png" alt="QR Code"> <!-- Placeholder QR code -->
+                </div>
+
+                <!-- Cash Payment Details -->
+                <div class="cash-payment" id="cash-payment" style="display: none;">
+                    <p>Please pay cash at the time of boarding the bus.</p>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Confirm Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>© 2024 BookItAll. All Rights Reserved.</p>
+            <p>Email: support@bookitall.com | Phone: +123-456-7890</p>
+            <p>Office Address: 123 Travel Avenue, Wanderlust City, 45678</p>
+        </div>
+    </footer>
+
+    <script>
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const qrCode = document.getElementById('qr-code');
+        const cashPayment = document.getElementById('cash-payment');
+        const qrCodeImg = document.getElementById('qr-code-img');
+
+        paymentMethodSelect.addEventListener('change', function() {
+            if (this.value === 'cash') {
+                qrCode.style.display = 'none';
+                cashPayment.style.display = 'block';
+            } else if (this.value === 'blockchain') {
+                qrCode.style.display = 'block';
+                cashPayment.style.display = 'none';
+
+                // Fetch the QR code URL from the backend
+                fetch('/generate-qr-code')
+                    .then(response => response.json())
+                    .then(data => {
+                        qrCodeImg.src = data.qrCodeUrl; // Update QR code image source
+                    })
+                    .catch(error => console.error('Error fetching QR code:', error));
+            } else {
+                qrCode.style.display = 'none';
+                cashPayment.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

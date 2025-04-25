@@ -1,0 +1,111 @@
+/* Movie Results Section */
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #051622; /* Very dark blue */
+    padding: 20px;
+    color: white;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    color: #1BA098; /* Teal */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #1BA098; /* Teal */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #DEB992; /* Light beige */
+}
+
+.movie-results-section {
+    background-color: #051622; /* Same as bus booking page */
+    padding: 70px 0;
+    text-align: center;
+    color: #DEB992; /* Same as bus booking page */
+}
+
+.movie-results-section .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.movie-results-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #DEB992; /* Same as bus booking page */
+}
+
+.movie-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: #1BA098; /* Same as bus booking page */
+    border-radius: 10px;
+    overflow: hidden;
+    width: auto;
+    max-width: 250px; /* Maximum width to maintain layout consistency */
+    text-align: center;
+    padding: 10px;
+    text-decoration: none; /* Remove underline from links */
+    color: #DEB992; /* Same as bus booking page */
+    transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Slightly increase the size of the card */
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    max-height: 200px; /* Limit maximum height */
+    object-fit: cover;
+    border-bottom: 3px solid #DEB992; /* Same as bus booking page */
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-info h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.movie-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #051622; /* Very dark blue */
+    color: white;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10px 0;
+}
